@@ -1,20 +1,24 @@
-# AI Product Mentor 🚀
+# Elly — AI Product Mentor
 
-An AI mentor that challenges product ideas before teams build them.
+An AI product thinking partner that helps PMs challenge ideas, make product
+decisions, and plan AI features before teams build them.
 
 ## Overview
 
-AI Product Mentor is an AI-powered product thinking partner.
+Elly is an AI-powered product thinking ally for PMs.
 
 Instead of helping PMs write PRDs faster, it helps teams make better product decisions before development begins.
 
-The goal is to simulate the thinking process of a senior product manager:
+The goal is to simulate the thinking process of a senior product manager and
+AI product coach:
 
 - Understand the real problem
 - Challenge assumptions
 - Evaluate opportunities
 - Identify risks
 - Recommend MVP scope
+- Evaluate whether a problem is suitable for AI
+- Recommend a controllable AI solution and identify its risks
 
 ---
 
@@ -108,6 +112,18 @@ AI evaluates:
 
 ---
 
+## Product Surfaces
+
+- **Challenge Idea** — challenge assumptions and define the smallest validation
+- **Product Decision** — clarify options, trade-offs, and decision criteria
+- **AI Planning** — collect product context and show an AI Readiness assessment,
+  recommended solution, risks, and next questions
+- **AI Spec** — planned
+- **AI Evaluation** — planned
+
+AI Planning is currently an interactive frontend prototype. Its Analyze action
+uses mock data and does not call a planning API or AI agent yet.
+
 ## MVP Scope
 
 The first version focuses on:
@@ -175,6 +191,25 @@ Current focus:
 - Agent design
 - Prompt engineering
 - Prototype implementation
+
+## Chat API and Memory v0.1
+
+`POST /mentor/chat` starts a product-mentoring conversation. Reuse the returned
+`conversation_id` to continue it; Memory v0.1 retains the conversation and
+retrieves relevant prior product context. See [Memory v0.1](docs/memory-v0.1.md)
+for the request and response flow.
+
+The Mentor Orchestrator selects a `challenge`, `decision`, or general `mentor`
+mode for each chat message, while retaining the same conversation context.
+
+## Run the MVP chat app
+
+From `backend`, start the API with `uvicorn app.main:app --reload`, then open
+`http://127.0.0.1:8000/app`. Challenge Idea and Product Decision use the Mentor
+chat API. AI Planning is currently evaluated with frontend mock data.
+
+For the recommended presentation story, sample inputs, talk track, and fallback
+plan, see [Demo Flow](docs/demo-flow.md).
 
 ---
 

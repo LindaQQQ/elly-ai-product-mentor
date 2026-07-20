@@ -5,7 +5,7 @@ from app.services.prompt_loader import load_prompt
 
 def analyze_decision(decision: ProductDecision):
 
-    prompt = load_prompt("challenge-agent")
+    system_prompt = load_prompt("decision-agent.md")
 
     decision_context = f"""
 Decision Title:
@@ -23,29 +23,19 @@ Problem:
 Business Context:
 {decision.business_context}
 
+User Value:
+{decision.user_value}
+
 Constraints:
 {decision.constraints}
+
+Expected Output:
+{decision.expected_output}
 """
 
     response = generate_response(
-        f"""
-You are an AI Product Mentor.
-
-Help a Product Manager make a product decision.
-
-Analyze this decision:
-
-{decision_context}
-
-Provide:
-
-1. Key assumptions
-2. Risks
-3. Alternatives
-4. Trade-offs
-5. Recommendation
-6. Next questions for validation
-"""
+        system_prompt,
+        decision_context
     )
 
     return response

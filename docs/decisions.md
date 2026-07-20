@@ -109,3 +109,34 @@ Idea → Challenge → Assessment → MVP Recommendation
 ## Reason
 
 The first goal is proving AI product judgment value.
+
+---
+
+# Decision 005 — Validate AI Planning with a Frontend Prototype First
+
+Date:
+2026-07-17
+
+## Decision
+
+Add AI Planning as an interactive frontend prototype before implementing a
+Planning Agent or backend API.
+
+The prototype keeps Challenge Idea and Product Decision intact and demonstrates:
+
+- Structured planning inputs
+- AI Readiness and AI suitability
+- Workflow, RAG, Agent, Memory, and Tools recommendations
+- Main risks and next questions
+
+## Reason
+
+The immediate uncertainty is whether PMs find the planning workflow and output
+useful—not whether the team can connect another model prompt. Mock data makes it
+possible to test information hierarchy, comprehension, and usefulness quickly.
+
+## Trade-off
+
+The prototype cannot assess arbitrary requirements accurately. Demo and research
+participants must be told that the result is mock data until a Planning Agent,
+schema, evaluation set, and API are implemented.

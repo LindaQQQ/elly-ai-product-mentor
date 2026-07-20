@@ -57,6 +57,21 @@ This AI partner understands:
 
 And helps teams continuously improve product decisions.
 
+The intended product journey is:
+
+```text
+Idea
+  → Challenge assumptions
+  → Make a product decision
+  → Plan the AI solution
+  → Define the AI spec
+  → Evaluate quality and launch readiness
+```
+
+This expands the Mentor from a decision-support experience into an AI product
+operating workflow while preserving the same core philosophy: help PMs think
+better instead of merely generating more documents.
+
 ---
 
 ## Positioning
@@ -67,7 +82,8 @@ AI Product Mentor is not:
 
 AI Product Mentor is:
 
-> A thinking partner that helps teams decide what should be built.
+> A thinking partner that helps teams decide what should be built, whether AI
+> belongs in the solution, and how the AI product should be validated.
 
 ---
 

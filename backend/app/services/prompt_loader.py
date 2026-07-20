@@ -13,6 +13,10 @@ def load_prompt(filename: str) -> str:
         / filename
     )
 
+    # 如果沒有副檔名，自動補 .md
+    if prompt_path.suffix == "":
+        prompt_path = prompt_path.with_suffix(".md")
+
     return prompt_path.read_text(
         encoding="utf-8"
     )

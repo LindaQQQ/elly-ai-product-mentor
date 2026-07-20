@@ -116,6 +116,41 @@ Validate:
 
 - What metrics prove value
 
+## Current Product Stages
+
+### MVP — Decision Mentor
+
+- Challenge Idea
+- Product Decision
+- Conversational context and Memory v0.1
+
+### V0.2 Prototype — AI Planning
+
+The interactive prototype collects:
+
+- Requirement description
+- Product goal
+- Primary user
+- Acceptable error risk
+- Current knowledge source
+
+It demonstrates the intended output:
+
+- AI Readiness score
+- Whether AI is appropriate
+- Workflow, RAG, Agent, Memory, and Tools recommendation
+- Main risks
+- Next questions
+
+The current Analyze action uses frontend mock data. A Planning Agent, planning
+API, persistence, and generated assessment are not implemented yet.
+
+### Later Stages
+
+- AI Spec
+- AI Evaluation
+- Launch checklist and production monitoring guidance
+
 ---
 
 # MVP Output
@@ -143,6 +178,9 @@ The MVP will not include:
 - Team collaboration
 - Enterprise integrations
 - Long-term memory
+- Production AI Planning analysis
+- AI Spec generation
+- Evaluation dataset generation
 
 ---
 
